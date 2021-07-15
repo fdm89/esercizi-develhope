@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="it"></html>
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="fulvio di maio">
+    <meta name="description" content="form piano abbonamenti">
+    <meta name="viewport" content="width=device-width, initial-scale1.0, maximu-scale=1.0, user-scalabe=no"/>
+    <title>form piano abbonamenti</title>
+</head>
+<body>
+    <form>
+        <div>
+            <label for="email">
+               <span>Email</span>
+            </label><br>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div>
+            <label for="password">
+                <span>Password</span>
+            </label><br>
+            <input type="password" minlength="7" title="must contain at least one number and one uppercase and lowercase letter, and at least 7 or more characters" required>
+        </div>
+        <div>
+            <label for="name">
+                <span>Nome e Cognome</span><br>
+                <input type="text" id="name" name="id" required>
+            </label>
+        </div>
+        <div>
+            <label for="date">
+                <span>Data di nascita</span><br>
+                <input type="date" required>
+            </label>
+        </div>
+        <div>
+            <label for="numeric">
+                <span>Numero di telefono</span><br>
+                <input type="text" id="numeric" name="numeric" required>
+            </label>
+        </div>
+        <div>
+            <label for="plan">
+                <span>Piano di abbonamento</span><br>
+                <select id="plan" name="plan" required>
+                    <option>Free</option>
+                    <optgroup label="Mensili">
+                        <option>1.99€/Mese</option>
+                        <option>5.99€/Mese</option>
+                        <option>11.99€/Mese</option>
+                    </optgroup>
+                </select>
+            </label>
+        </div>
+        <div>
+            <label for="pro plan">
+                <span>Piano pro</span><br>
+            </label>
+            <input type="checkbox" id="pro plan" name="pro plan" required>
+        </div>
+        <div>
+            <label for="numeric">
+                <span>Numero Carta</span><br>
+                <input type="text" id="numeric" name="numeric" pattern="[0-9] {16}" required>
+            </label>
+        </div>
+        <div>
+            <label for="cvc">
+                <span>CVC</span><br>
+                <input type="text" id="cvc" name="cvc" pattern="[0-3] {3}" required>
+            </label>
+        </div>
+        <div>
+            <label for="expiration">
+                <span>Scadezna</span><br>
+                <input type="date" id="expiration" name="expiration" required>
+            </label>
+        </div>
+        <div>
+            <label for="address">
+                <span>Indirizzo di fatturazione</span><br>
+                <input type="text" id="address" name="address" required>
+            </label>
+        </div>
+        <div>
+            <button type="submit">Registrati</button>
+        </div>
+    </form>
+</body>
