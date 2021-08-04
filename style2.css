@@ -1,0 +1,36 @@
+
+#toggle {
+	display: none;
+}
+
+.hidden-text {
+	visibility: collapse;
+	background: gray;
+	color: white;
+}
+
+#label-toggle {
+	display: inline-block;
+	margin-top: 12px;
+	padding: 6px 12px;
+	background-color: #ff8888;
+	border: 1px solid;
+	border-radius: 3px;
+	transition: 0.3s;
+}
+
+#label-toggle::before {
+	content: "Mostra righe";
+}
+
+#toggle:checked ~ * .hidden-text {
+	visibility: visible;
+}
+
+#toggle:checked ~ #label-toggle {
+	background-color: #88ff88;
+}
+
+#toggle:checked ~ #label-toggle::before {
+	content: "Nascondi righe";
+}
