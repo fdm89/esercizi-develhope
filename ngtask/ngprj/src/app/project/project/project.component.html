@@ -1,0 +1,39 @@
+
+<ngprj-project-list [projects]="projects" (selected)="selectProject($event)"></ngprj-project-list>
+<!--<p *ngIf="selectedProject">Progetto Selezionato: {{selectedProject.name}}</p>--> <!--tolgo <p> dopo aver creato il decoratore input-->
+<hr>
+<ngprj-project-detail [project]="selectedProject"></ngprj-project-detail>
+<hr>
+<ngprj-project-form (submitted)="submitProjectForm($event)"></ngprj-project-form>
+<!--<form #f="ngForm" (ngSubmit)="submitProjectForm(f)" class="row g-3">
+  <div class="col-md-4">
+    <label for="name" class="form-label">Nome</label>
+    <input type="text" name="name" class="form-control" placeholder="Nome" required ngModel #namefield="ngModel">
+    <p *ngIf="namefield.touched && namefield.invalid" class="text-danger"><small>Il campo e` richiesto</small></p>
+
+  </div>
+  <div class="col-md-4">
+    <label for="priority" class="form-label">Priority</label>
+    <select class="form-select" name="priority" required ngModel #priorityfield="ngModel">
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select>
+    <p *ngIf="priorityfield.touched && priorityfield.invalid" class="text-danger"><small>Il campo e` richiesto</small></p>
+  </div>
+
+<div class="col-md-4">
+  <label for="validationDefaultUsername" class="form-label">Date</label>
+  <input type="date" name="start" class="form-control" placeholder="Data Inizio" required ngModel #datefield="ngModel">
+  <p *ngIf="datefield.touched && datefield.invalid" class="text-danger"><small>Il campo e` richiesto</small></p>
+</div>
+<div class="col-md-12 ">
+  <label for="description" class="form-label">Description</label>
+  <textarea class="form-control" name="description" placeholder="Descrizione" required ngModel #descriptionfield="ngModel"></textarea>
+  <p *ngIf="descriptionfield.touched && descriptionfield.invalid" class="text-danger"><small>Il campo e` richiesto</small></p>
+  <div class="col-12">
+    <button [disabled]="f.invalid" type="submit" class="w-100 btn-primary btn-lg">Crea</button>
+  </div>
+</div>
+(anche questo p era gia commentato prima di commentare tutto il form<!--<p>Validita: {{f.valid}}</p> )
+</form>-->
